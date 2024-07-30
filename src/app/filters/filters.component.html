@@ -1,0 +1,8 @@
+<ul class="layout-column ml-0 pl-0 filter-list"
+  [attr.data-test-id]="this.filterType === 'gender' ? 'gender-filter' : 'category-filter'">
+  <span class="section-title">{{this.filterType === 'gender' ? 'Gender': 'Category'}}</span>
+  <li *ngFor="let filter of filterValues;" class="sidebar-item" [ngClass]="{'active': selectedFilter === filter}"
+    (click)="filterClickHandler(filter)">
+    {{filter}}
+  </li>
+</ul>

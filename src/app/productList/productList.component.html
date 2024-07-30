@@ -1,0 +1,21 @@
+<section class="content">
+  <ul class="mr-20 matches styled" data-test-id="product-list">
+    <li class="slide-up-fade-in product-details layout-row">
+      <span><b>TITLE</b></span>
+      <span><b>CATEGORY</b></span>
+      <span><b>GENDER</b></span>
+      <span><b>BRAND</b></span>
+    </li>
+    <ng-container *ngIf="productList?.length">
+      <ng-container *ngFor="let product of productList">
+        <li class="product-details layout-row slide-up-fade-in">
+          <!--       Use below to render list item for each product object-->
+          <span>{{product.title}}</span>
+          <span>{{product.category}}</span>
+          <span>{{product.gender}}</span>
+          <span>{{product.brand}}</span>
+        </li>
+      </ng-container>
+    </ng-container>
+  </ul>
+</section>
